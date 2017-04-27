@@ -1,0 +1,1390 @@
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      				  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+ 
+Q 1 [ Marks : 15 ]
+
+Design a class Book containing following members:
+
+	bookID		text
+	title		text
+	author		text
+	category 	text 
+	price		float
+	
+Define Parameterized constructor to initialize Book object. Perform the below validations
+
+•	Category must be “Science”, “Fiction”, “Technology” or “Others” 
+•	Price cannot be negative
+•	bookID must start with ‘B’ and must be of length 4 characters
+
+If any of the validations fail, throw an user defined exception InvalidBookException.
+
+Design a class called BookStore which contains an appropriate collection object to store Book instances.
+
+Implement the below operations.
+
+1.	addBook(Book b)
+To add a new Book object into the collection. 
+
+2.	searchByTitle(String title)
+Search a book based on title and if found, display the details
+
+3.	searchByAuthor(String author)
+Search a book based on author and if found, display the details
+
+4.	displayAll()
+Print the details of all the books
+
+Store both classes in a package com.book. 
+
+Create a class BookUtil in package com.bookutil which has the main method. 
+
+•	Instantiate the BookStore class 
+•	Read data from user for 3 Book objects. 
+•	Call the addBook method to add the book objects into the collection
+•	Search the books by title and author
+•	Display all the book details
+
+Q 1	Steps	Marks
+a)		Designing Book class properly	2
+b)		Proper validation of Book data	3
+c)		Reading input from user and adding Book objects to Collection	2
+d)		Proper implementation of search operations	2
+e)		Creating and using package	1
+f)		Proper Exception handling	2
+g)		Testing all operations from BookUtil class properly	2
+h)		Proper comments, coding conventions & indentation 	1
+
+
+Q 2 [ Marks : 10 ]
+
+Design an interface Language with the below method.
+
+void showMessage( )
+
+Design the class  CLang which implements Language Interface.  In showMessage( ),  it prints the message that “C Program is running” .
+Design the class  JavaLang which implements Language Interface.  In showMessage( ),    it prints the message that “Java Program is running”. 
+
+We want to simulate running of both programs simultaneously.  Use multithreading to achieve this.  
+
+Create the TestClient class which creates one object of each of the above 2 classes.
+
+Ask the user to select his/her favorite language to be run first. For example if user provider the input as  “Java”, set highest thread priority to Java Thread.  
+
+The output may be as follows:
+
+                       “Java Program is running”
+                       “C Program is running”
+
+In case of  “C” as input, the output may be,
+
+                        “C Program is running”
+	           “Java Program is running”
+
+S. No	Functionality	Marks
+a	Designing an interface properly	1
+b	Designing 2 language classes properly	2
+c	Implementing multi threading properly	4
+d 	Reading choice from user	1
+e 	Handling thread priority properly as per requirement	1
+f 	Coding standard, comments & Indentation.	1
+
+===========================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      				  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+
+Q 1 [ Marks :10 ]
+
+Create an abstract class called Vehicle which contains the following members.
+
+vehicleNo	         	int
+engineStatus	String(on/off)
+currentGear	int
+           
+parametrized constructor to construct and initialize an object.
+
+abstract void ignite()
+abstract int changeGear(int flag)
+abstract void stop()
+
+Design the class Car which extends Vehicle and has the following members:
+
+powerStearing		Boolean type
+fuelType			String type (Gas/Petrol/Deisel)
+
+parametrized constructor
+
+void showCarDetails( ) 	// To display the car details
+
+Override the abstract methods of the superclass Vehicle as per the specification below. 
+
+The ignite() function must set the engineStatus to on and currentGear to 1.
+The stop() function must set the engineStatus to off and currentGear to 0.
+
+changeGear() function should take a flag as parameter. 
+
+•	If the flag is 1, the currentGear must be increased by 1. But make sure that the currentGear doesn’t exceed 6. 
+
+•	If the flag is -1, the currentGear must be decreased by 1. But the minimum currentGear value is 1 below which it cannot be reduced. 
+
+Store both the classes in a package com.vehicle
+
+Write a class called TestVehicle in a package com.vehicle.test which has the main method. 
+
+Create a reference to the class Vehicle. The reference of class Vehicle should refer to object of Car class. Invoke all the methods using Vehicle reference object.
+
+Invoke the showCarDetails() of the Car class after typecasting the Vehicle reference to Car type.
+
+Q 1	Steps	Marks
+a	Creating an abstract class Vehicle in a package	2
+b	Designing derived class Car properly	4
+c	Creating Vehicle reference and invoking methods	2
+d	Typecasting Vehicle to Car type and invoking the showCarDetails()	1
+e	Importing packages correctly	1
+
+Q 2 [ Marks :15 ]
+
+Create a class Employee which has the following members:
+
+empId		integer type
+empName		String 
+grade		String (Possible values U1,U2,U3,U4,P1,P2)
+
+mutator and accessor methods.
+
+Also override the toString method in the class. 
+
+Write a class TestFile which contains the main method doing the below. 
+
+a)	Ask the user to enter the total number of employees. Create n Employee objects and store them in an array.
+
+b)	If the grade entered is not in the permitted list of values, throw an user defined exception InvalidGradeException and handle.
+
+c)	In case of no Exception, write the Array of objects into a file empdetails.txt. Use proper delimiters to separate the empId, empName and grade. Every Employee object should be written in a new line in the file.
+
+d)	Read the Array of objects from the file and display the information to the console.
+
+		
+Q 2	Steps	Marks
+a	Creating the Employee class properly	2
+b	Creating an Array of Employee objects after taking the input from the user	2
+c	Creating & handling user defined exception properly 	2
+d	Writing the array of Employee objects properly to the file 	3
+e	Reading the array of Employee objects properly from the file	3
+f	Displaying Employee information properly on the console	2
+g	Proper comments, coding conventions & indentation 	1
+
+
+===========================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      				  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+
+Q 1 [ Marks :15 ]
+
+A Telecom Service Provider wants to do the automatic billing of the mobile bills of their customers. Design the application as per the below specifications.
+
+a)	Create a package com.bill and store following classes in this package.
+
+b)	Create an abstract class called Customer.   The following are its members 
+
+	custId			int
+custName		String
+	mobileNumber 		long
+	
+•	Parameterized constructor
+•	Getters and setters for all the fields
+•	double calculateBill( int minutes )  - Abstract method to calculate the bill   
+                  
+c)	Design a class PremiumCustomer from Customer with following members
+
+billNo		int
+billAmount 	float
+
+•	Getter methods
+•	Parameterized customer
+•	double calculateBill ( int minutes )  - Overridden method for calculating bill amount  
+
+The bill amount is calculated as follows:
+
+For first 30 mins, it is Rs 1 / minute. Then after it is 0.50 paise/minute 
+
+     d) Design a class RegularCustomer from Customer with following members 
+
+billNo		int
+billAmount 	float
+
+•	Getter methods
+•	Parameterized customer
+•	double calculateBill ( int minutes )  - Overridden method for calculating bill amount  
+
+The bill amount is calculated as follows:
+
+For first 30 mins, it is Rs 1.5 / minute. Then after it is Rs 1 / minute 
+
+e)	Create a class TestClient having main method in default package.  Create an array of reference of type Customer of size 2.  Store RegularCustomer and PremiumCustomer objects in this array. 
+
+f)	Finally calculate the total of all the bill amounts.
+
+Input all the required values through key board, calculate bill amount and display the data properly with customer id, customer name, mobileNumber, bill no and bill amount.
+
+Q 1	Steps	Marks
+a)		Proper design of the required classes	2
+b)		Use of package	1
+c)		Proper functioning of calculateBill in RegularCustomer	2
+d)		Proper functioning of calculateBill in PremiumCustomer	2
+e)		Creating proper reference and pointing to objects 	2
+f)		Reading input and Displaying output properly	2
+g)		Calculating the total bill amount	2
+h)		Proper comments, coding conventions & indentation 	1
+
+
+Q 2 [ Marks :10 ]
+
+Write a main program which will do the following:
+i.	Accept 5 numbers as command line arguments.
+ii.	If 5 numbers are not present throw a user defined Exception which will display an appropriate message.
+iii.	Check if a file called NumberFile.txt exists. If the file already exists open it, so that the contents will be appended to the end of the file. If the file does not exist open it in the write mode.
+iv.	Write the 5 numbers to the file.
+v.	Read the contents from the file and display to the console.
+	
+	Steps	Marks
+a	Accepting the command line arguments	1
+b	Designing & Handling the User defined Exception properly	3
+c	Checking if the file exists and opening it in the proper mode	1
+d	Writing to the file properly	2
+e	Reading from the file and display to the console 	2
+f	Proper comments, coding conventions & indentation 	1
+
+
+=======================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      				  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+
+Q 1 [ Marks :15 ]
+
+a.	Create an Abstract class called Employee which contains the following members.
+empId 	        	integer type     	           
+empName	        	text  
+dateOfJoining  	An object of  DateOfJoin class.
+basicSal		double
+
+Parametrized constructor to construct and initialize an object.
+showDetails() to display the details of the employee.
+calcSal() which does not have any implementation in Employee class
+
+b.	The DateOfJoin class has three integer variables day, month and year, a parametrized constructor and showDate() method to display the date.
+
+c.	Design two classes: Technical and Operation by extending Employee class
+
+d.	The Technical and Operation classes should have the following members.
+
+a.	jobDesc	String type
+b.	grade		String type 
+c.	Overridden showDetails() method from the Employee class to also display the job description and grade
+
+d.	calcSal() which will calculate total income of the employee.
+
+Technical employees are eligible for a bonus of 10% of their basic salary. While Operation employees can get 5% as a bonus. Total income is the sum of basic salary and the calculated bonus.
+
+e.	All the above classes should be placed in a package called com.emp and imported into the main program.
+
+f.	The privileges given to calSal() and showDetails() of the Employee class should be 
+such that they are visible only to the derived classes.
+
+g.	Write a class TestEmployee in package com.testemp which contains the main() method
+
+Create an Array of 2 Employee references. Ask the user to enter the details of 2 Employees - one Technical and one Operation. Store the Technical and Operation objects in the array. 
+
+Print the details of them.
+
+
+Q1	Steps	Marks
+a.	Designing the DateOfJoin class properly	1
+b.	Designing the Employee class properly	2
+c.	Designing derived classes properly with data members & method signatures	2
+d.	Calculating salary of Technical & Operation employees properly	1
+e.	Placing the classes in a package and importing them into the main program	1
+f.	Giving proper privileges to the member methods in the Employee class 	1
+g.	Taking the input from the user 	2
+h.	Creating and storing the objects in array	2
+i.	Printing the details 	2
+
+
+Q 2 [ Marks :10 ]
+
+Write a Java program to copy contents of one file to another file. While copying all the small case characters are to be changed into uppercase and vice-versa. Pass both file names from command line.  First argument is a source file name and second should be destination file name.
+
+Program should take two arguments only.  If not, raise a custom exception InsufficientArgException. 
+
+Note : Source file to be created to test the application.
+
+
+Q 2	Steps	Marks
+a)	Use of command line arguments	2
+b)	Validation of command line arguments	2
+c)	Copying data from source to destination file	5
+d)	Proper comments, coding conventions & indentation 	1
+	
+=================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      				  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+
+Q 1 [ Marks :15 ]
+
+Orange Height Reality developers help the builders to get the buyers for their buildings.  They get the commission from builders after customer has agreed to purchase the Flat. They sell different types of flats like 1BHK, 2BHK, 3BHK and get the incentive based on this.  Develop a Java application to automate the working of the incentive system.  
+
+Design a class Flat which has the following private members
+
+  flatId				int
+  flatType			String
+  flatCost                                 	double   
+-	Define parameterized constructor and getter methods for all instance variables.
+
+-	Define setter methods for all instance variables with the below validations done
+-	Flat Cost should not be less than 1000000
+-	Flat Type should be either 1BHK or 2BHK or 3BHK
+
+Throw a custom exception InvalidInputException if any of the validations fail.
+
+Design a class Employee with the following methods.
+		empId		int
+		empName	String
+		flatsSold	ArrayList of Flat objects
+
+Write suitable constructor to initialize them.										            	  
+a)	public double calculateIncentive () 
+
+which will calculate and print the incentive earned for each flat sold by the employee. Incentive to be calculated as below
+ 
+		1 BHK : 4% of  Flat Cost      
+2 BHK : 6% of  Flat Cost 	
+3 BHK : 8% of  Flat Cost.
+
+b)	public void addFlat (Flat f ) 
+
+which will add the given Flat object into the ArrayList
+
+c)	public void generateReport()
+
+which will the print the details of the flats sold by the employee in the below format
+
+EmpID : _________		Empname : _______
+
+Flat ID	Flat Type	Flat Cost
+_____	_________	________
+_____	_________	________
+
+
+
+Create a class TestIncentive which contains the main method. Read input from the user and test the above functionalities by making suitable calls to the functions.
+	
+
+Q 1	Steps	Marks
+a)		Designing the Flat class properly	1
+b)		Proper validation of Flat details	2
+c)		Reading input from user and creating Employee and Flat objects 	2
+d)		Calculating the incentive correctly	2
+e)		Functionality to add a flat object into the ArrayList	2
+f)		Printing the report in the given format	3
+g)		Proper Exception handling	1
+h)		Testing all operations from TestIncentive class properly	2
+
+
+Q 2 [ Marks :10 ]
+
+Develop an application FileCompress.java for performing a file copy operation. 
+
+The user will run the application as
+
+java FileCompress source-filename destination-filename
+
+Ensure that the command line inputs are given as expected.
+
+Make sure that the source file exists before starting the copy operation.  When the source file doesn’t exist, print an error message “Source File Not Present”.  If present, copy the contents of the source file to destination file excluding the white space characters.
+
+For instance, if the source file has below text
+This is a sample file
+
+The destination file is expected to have
+Thisisasamplefile
+
+
+
+Q 2	Steps	Marks
+a)	Handling command line arguments properly	3
+b)	Checking the existence of the source file	2
+c)	Working of file copy operation	4
+d)	Proper comments, coding conventions & indentation 	1
+
+		
+
+========================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      		  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+Q 1 [ Marks :15 ]
+
+Write an application for the Cyber Café as mentioned below:
+
+Design the class called CyberCafe which has the following fields 
+
+cafeName			text
+address			text
+membersCount		int	
+ratePerHour		int
+
+It should have the parameterized constructor to initialize all the values at the time of creating the object. 
+ 
+a)	Create the ‘n’ objects of the Cyber Café class by taking required values from user. Value of ‘n’ needs to be asked to user.
+
+b)	Create an array list and store these objects inside it. 
+
+Accept 2 cyber cafe names to be searched in the arraylist.  Start a separate thread for each search. The source code of searching should be implemented as critical section in which only one thread can enter at a time. 
+
+Display the result of searching. 
+
+
+
+Q 1	Steps	Marks
+a	Designing the CyberCafe class 	2
+b	Reading inputs from the user	1
+c 	Creation of ‘n’ objects properly	2
+d	Storing object into array list.	2
+e 	Creation of threads	2
+f	Searching Arraylist properly 	2
+g	Implementing the critical section properly	3
+h	Displaying the result of search	1
+
+Q 2 [ Marks :10]
+
+Write a menu driven program to do the following operations for Technical Infrastructure Management (TIM).
+
+(i)   Make a Request
+(ii)  Generate Report
+(iii) Exit
+
+Create a class named Helpdesk with the following data members:
+
+Data Member	Description
+requestId	Request Number
+empId	Employee Number
+problem	Indicates the type of problem
+status	Indicates the status of the call as either Open  or Closed
+remarks	Comments regarding the call.
+
+All menu options should work as follows:
+
+i.	Call Request  
+
+This module is used to insert values for the above mentioned data members in the file named “callrequest.txt”.
+
+Create the file if it doesn’t exist. Otherwise new record should be appended to existing file.
+
+ii.	Generate Report
+
+This module has to display all the requests registered so far by reading from the file. Check if the file exists. If not, throw an exception FileNotAvailable and handle it.
+
+iii.	Exit
+
+This must allow the user to quit the application.
+
+			
+Marks Distribution:
+
+Q 2	Steps	Marks
+a	Menu Creation & proper working	1
+b	Designing Helpdesk class properly	2
+c	Writing the call details into file	2
+d	Reading the file data properly	2
+e	Handling the exception	2
+f	Proper comments, coding conventions & indentation	1
+
+
+
+==========================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      				  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+Q 1 [ Marks :15 ]
+
+a.	Create a class called Transmission which has the following properties
+bandwidth		integer type
+	signalNoiseRatio	double type
+	propogationTime	integer type
+	crosstalk		float type
+
+b.	 Create an ArrayList  of Transmission objects (5 objects).
+
+c.	Design two threads:
+
+i.	One thread should read the Transmission object from the Arraylist object and display it to the console.
+ii.	Another thread should delete the Transmission object which was written to the console from the ArrayList object. Both the threads should be synchronized.
+
+Sr No	Functionality	Marks
+a	Designing the class properly	2
+b	Creating an ArrayList of Transmission objects properly 	1
+c	Proper working of the thread to write the Transmission object to the console	4
+d	Proper working of the thread to delete the Transmission object from the ArrayList 	4
+e	Synchronization of threads	3
+f	Proper comments, coding conventions & indentation 	1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ans:-
+
+import java.util.ArrayList;
+import java.lang.*;
+
+public class Question12 {
+
+	public static void main(String[] args) {
+		 
+		  trans t1=new trans(30,15,5,6);
+		  trans t2=new trans(40,25,8,8);
+		  trans t3=new trans(50,95,4,5);
+		 trans t4=new trans(20,35,5,6);
+		  trans t5=new trans(40,25,9,4);
+		 
+		  t1.addarray(t1);
+		  t2.addarray(t2);
+		  t3.addarray(t3);
+		  t4.addarray(t4);
+		  t5.addarray(t5);
+		  
+		  
+		  trans newobj=new trans();
+		  
+		  MyThread0 thread1=new MyThread0(newobj);
+		  Mythread2 thread2=new Mythread2(newobj);
+		  
+		  thread1.start();
+		  thread2.start();
+
+	}
+
+}
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.io.*;
+import java.lang.*;
+
+public class trans {
+
+	int bandwidth;		
+	double signalNoiseRatio;
+	int propogationTime;
+	float crosstalk;
+	static int i=0;
+	static int k=0;
+	static ArrayList<trans> tra=new ArrayList<trans>(); 
+	boolean valueset=false;
+	
+	trans()
+	{
+		//System.out.println(tr.size());
+	}
+	trans(int b,double s,int p,float c)
+	{
+		bandwidth=b;
+		signalNoiseRatio=s;
+		propogationTime=p;
+		crosstalk=c;
+	}
+	
+	public String tostring()
+	{
+		return "Bandwidth: " + bandwidth +" SNR: " + signalNoiseRatio +"PROPAGATION TIME: " + propogationTime + "CROSSTALK: " + crosstalk;
+	}
+	
+    void addarray(trans obj)
+    {
+    	tra.add(obj);
+    	//System.out.println(tr.size());
+    	//System.out.println("**********");
+    	//System.out.println(tr);
+    }
+   
+		
+   synchronized  void readelements()
+  { 
+	System.out.println("--------------");
+	
+	if(valueset)
+	
+		try
+        {
+         //valueset=true;
+         wait();
+      }catch(Exception m)
+            {}
+	    valueset=true;
+		//Iterator it=tr.iterator();
+	    //while(it.hasNext())
+		   //{
+	    	trans t=(trans) tra.get(i);
+	    	System.out.println(i);
+			System.out.println(t.propogationTime);
+			++i;
+			
+	           // }
+	
+		System.out.println("Transmission object is readed ");
+		notify();
+	} 
+  
+   
+   synchronized  void deleteelements()
+   { 
+	   System.out.println("++++++++++");
+	   if(!valueset)
+        try
+	   {
+    	   wait();
+	   }
+	   catch(Exception m){
+		   System.out.println("Exception");
+	   }
+       
+	  // Iterator it1=tr.iterator();
+	   // while(it1.hasNext())
+		   //{
+			trans trans1=(trans) tra.get(i-1);
+			System.out.println(trans1.propogationTime);
+			tra.set(i-1,null);
+			System.out.println("deleted");
+			System.out.println(tra.get(i-1));
+		   //Transmission m=(Transmission) tr.get(i);
+			//Transmission trans2=(Transmission) it1.next();
+		  // System.out.println("Size of the arraylist: " + tra.size());
+		    valueset=false;
+		    k++;
+		  
+	    notify();
+ 	
+   }
+}
+   
+
+class MyThread0 extends Thread
+{
+	 trans t;
+	 MyThread0(trans t)
+	{
+		this.t=t;
+	}
+		public void run()
+	{
+			
+		for(int i=0;i<5;i++)
+	      t.readelements();
+	}
+	
+}
+
+class Mythread2 extends Thread
+{
+	trans t;
+	 Mythread2(trans t)
+	{
+		this.t=t;
+	}
+	public void run()
+	{
+		for(int j=0;j<5;j++)
+		t.deleteelements();
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+Q 2 [ Marks :10 ]
+
+ABC Suppliers is supplying different products to shops.  Develop an application as follows:
+
+a)	Design a class called Product which has the following properties
+
+prodID			Number
+prodName		Text 
+prodPrice		double
+prodQty		Number
+totalCost		Number
+
+Following are operations in Product class:
+
+Appropriate Parameterized Constructor 
+
+Function calTotal( ) to calculate total cost of product (will be prodQty * prodPrice)
+
+Function to display all details of a Product 
+
+Write the main program TestProduct in which following actions need to be done
+
+i)	Create an array of 3 Product objects containing 3 products data. 
+
+ii)	Invoke the calTotal() method to calculate the total cost of each product
+
+iii)	Write the name of all products whose total cost is greater than 300 into a file “product.txt”.
+
+
+Q 2	Steps	Marks
+a)	Proper design of the Product class	2
+b)	Creating array and storing details properly	2
+c)	Calculating the total cost of each product	2
+d)	Writing the product details in to a file	4
+
+
+Ans:-
+
+Product.java
+
+
+public class Product {
+
+	int prodId;
+	String prodName;
+	double prodPrice;
+	int prodQty;
+	int totalcost;
+	int caltotal=0;
+	
+	Product(int id,String name,double price,int qty,int cost)
+	{
+		prodId=id;
+		prodName=name;
+		prodPrice=price;
+		prodQty=qty;
+		totalcost=cost;
+	}
+	void calTotal()
+	{
+		int qty=(int) prodPrice;
+		caltotal=qty*prodQty;
+		System.out.println(caltotal);
+	}
+	void show()
+	{System.out.println("Prod Id: " + prodId + " Prod Name: " + prodName + " Prod Price: " + prodPrice + " Prod Qty: " + prodQty + " Prod total cost: " + totalcost);
+	}
+	
+}	
+	
+
+import java.io.*;
+
+public class TestProduct {
+
+	
+	public static void main(String[] args) {
+		Product[] arr=new Product[3];
+		
+	arr[0]=new Product(1,"ABC",300.00,3,200);
+	arr[1]=new Product(2,"DEF",400.00,5,400);
+	arr[2]=new Product(3,"GHI",500.00,2,600);
+	
+	
+	for(int i=0;i<3;i++)
+	{
+		arr[i].show();
+		
+	}
+	System.out.println(("Total Cost Calculation of the 3 arrays"));
+	for(int i=0;i<3;i++)
+	{
+		arr[i].calTotal();
+		
+	}
+	File f=new File("product.txt");
+	for(int i=0;i<3;i++)
+	{
+		if(arr[i].totalcost>300)
+		{
+			String name=arr[i].prodName;
+			try{
+			FileWriter fw=new FileWriter(f,true);
+			fw.write(name);
+			fw.write(" ");
+			fw.close();
+			}catch(Exception m)
+			{
+				System.out.println("Exception");
+			}
+			
+		}
+	}
+	
+	try
+	{FileReader fr=new FileReader(f);
+	 BufferedReader br=new BufferedReader(fr);
+	 System.out.println("The content of the file: " + br.readLine());
+	 
+	}catch(Exception m)
+	{
+		System.out.println("Exception");
+	}
+	
+	
+         }
+
+}
+===============================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      		  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+Q. 1 – Section A [ Marks: 15 ]
+
+TelFone, a Telecom service provider maintains information about different services offered to the mobile customers. One customer can opt for multiple services.
+
+a)	Design a Service class with following 
+•	private attributes
+			serviceID 	int
+			serviceName	String
+			monthlyRent	int
+			freeUnits	int
+
+•	Create parameterized constructor, getter / setter methods for all attributes. 
+•	Abstract method calculateCharge (int noOfUnits) to calculate and return the total for the service
+
+b)	Design a class SMSService. Implement calculateCharge method as
+•	If noOfUnits are less than or equals to freeUnits then charge = 0
+•	Otherwise calculate chargeable units as noOfunits – freeUnits
+•	If chargeable units are less than or equals to freeUnits, then charge = chargeableUnits * 0.5
+•	If chargeable units are more than freeUnits, then 
+charge = (freeUnits * 0.5 ) + ((chargeableUnits – freeUnits) * 0.2)
+
+c)	Design a class DataService. Unit is measured in multiples of 10KBs. Implement calculateCharge method as
+•	If noOfUnits are less than freeUnits, then charge = 0
+•	Otherwise charge = (noOfUnits - freeUnits) * 0.02 
+
+d)	Store above 3 classes in mobile.service package
+
+e)	Design a ServiceCollection class within mobile.coll package with following specification
+•	Attribute: availableServices array of Service objects. It is static and private.
+•	Static block to initialize the availableServices with 5 different services as follows. First 3 are the objects of DataService and remaining two are objects of SMSService
+			serviceID	serviceName	monthlyRent	freeUnits
+			1		3G-1GB	200		100000
+			2		3G-2GB	400		200000
+			3		2G-1GB	150		100000
+			4		SMS-100	25		100
+			5		SMS-300	60		300
+•	Static function getService which will take serviceID as a parameter and returns Service object from the array.  In case the given serviceID is not present, it will throw unchecked UnavailableServiceException.
+•	UnavailableServiceException must be defined in mobile.exp package
+
+
+Q 1 - A	Steps	Marks
+a)	Proper design of the class Service	2
+b)	Proper design of the class SMSService	3
+c)	Proper design of the class DataService	3
+d)	Proper design of the class ServiceCollection	4
+e)	Proper design of Exception class	2
+f)	Proper usage of packages	1
+
+
+Ans:-
+
+package mobile.service;
+public class SMSService extends Service{
+	double charge;
+	int chargeableUnits;
+	public SMSService(int serviceID, String serviceName, int monthlyRent, int freeUnits) {
+		super(serviceID, serviceName, monthlyRent, freeUnits);
+	}
+
+	@Override
+	public void calculateCharge(int noOfUnits) {
+		if(noOfUnits<=super.getfreeUnits())
+		{
+			 charge=0;
+			 System.out.println("Youre charge is:- "+charge);
+		}
+		else
+		{
+			chargeableUnits=noOfUnits-super.getfreeUnits();
+		if(chargeableUnits<=super.getfreeUnits())
+		{
+			 charge=chargeableUnits*0.5;
+			 System.out.println("Your charge is:- "+charge);
+		}
+		else
+		{
+		    charge = (super.getfreeUnits()* 0.5 )+((chargeableUnits-super.getfreeUnits())* 0.2);
+		    System.out.println("Your charge is:- "+charge);
+		}
+		}
+	}
+
+}
+
+package mobile.service;
+
+
+public abstract class Service {
+	private int serviceID;
+	private String serviceName;
+	private int monthlyRent;
+	private int freeUnits;
+	Service(int serviceID,String serviceName,int monthlyRent,int freeUnits)
+	{
+		this.serviceID=serviceID;
+		this.serviceName=serviceName;
+		this.monthlyRent=monthlyRent;
+		this.freeUnits=freeUnits;
+	}
+	public int getserviceID()
+	{
+		return serviceID;
+	}
+	public void setserviceID(int s)
+	{
+		s=serviceID;
+	}
+	public String getserviceName()
+	{
+		return serviceName;
+	}
+	public void setserviceName(String sn)
+	{
+		sn=serviceName;
+	}
+	public int getmonthlyRent()
+	{
+		return monthlyRent;
+	}
+	public void setmonthlyRent(int mr)
+	{
+		mr=monthlyRent;
+	}
+	public int getfreeUnits()
+	{
+		return freeUnits;
+	}
+	public void setfreeUnits(int f)
+	{
+		f=freeUnits;
+	}
+	abstract public void calculateCharge(int noOfUnits); 
+}
+
+
+package mobile.service;
+
+public class DataService extends Service{
+	double charge;
+	public DataService(int serviceID, String serviceName, int monthlyRent, int freeUnits) {
+		super(serviceID, serviceName, monthlyRent, freeUnits);
+	}
+
+	@Override
+	public void calculateCharge(int noOfUnits) {
+		if(noOfUnits<super.getfreeUnits())
+		{
+			charge=0;
+			System.out.println("Your Charge is:-"+charge);
+		}
+		else
+		{
+			charge = (noOfUnits-super.getfreeUnits())*0.02;
+			System.out.println("Your charge is:- "+charge); 
+		}
+	}
+
+}
+
+
+package mobile.coll;
+
+
+import mobile.exp.UnavailableServiceException;
+import mobile.service.*;
+public class ServiceCollection {
+	
+	static private Service availableService[]=new Service[5];
+	static void getService(int serviceID) throws UnavailableServiceException
+	{
+		for(int i=0;i<availableService.length;i++)
+		{
+			if(availableService[i].getserviceID()==serviceID)
+			{
+				System.out.println("The Service provider Name :- "+availableService[i].getserviceName());
+				System.out.println("The Service provider Free Units:- "+availableService[i].getfreeUnits());
+				System.out.println("The Service provider Monthly Rent:- "+availableService[i].getmonthlyRent());
+				System.out.println("The Service provider ServiceID:- "+availableService[i].getserviceID());
+			}
+		}
+	}
+	@SuppressWarnings("static-access")
+	public static void main(String[] args) throws UnavailableServiceException
+	{
+	availableService[0]=new DataService(1,"3Gb-1GB",200,100000);
+	availableService[1]=new DataService(2,"3Gb-2GB",400,200000);
+	availableService[2]=new DataService(3,"2Gb-1GB",150,100000);
+	availableService[3]=new SMSService(4,"SMS-100",25,100);
+	availableService[4]=new SMSService(5,"SMS-300",60,300);
+	ServiceCollection sc=new ServiceCollection();
+	sc.getService(3);
+	availableService[0].calculateCharge(10000000);
+	availableService[4].calculateCharge(400);
+       }
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+Q. 1 – Section B [ Marks: 10 ]
+
+Write the main method in class ServiceBill in mobile package, in which following functionality needs to be implemented
+
+i)	Read mobile number from the user
+ii)	Read serviceID and usage (number of units consumed) and calculate the total for it using the classes defined above
+iii)	Repeat step 2 for as many times user wishes to continue
+iv)	Handle the exceptions
+v)	At the last display the service bill in following format
+Customer Mobile Number: __________
+Service Name		Units Consumed	Monthly Rent		Charge
+SMS-100		120			25			10
+3G-1GB		80000			200			0
+			Total:			225			10
+Payable Amount: 235
+
+Q 1 - B	Steps	Marks
+a)		Reading the data	3
+b)		Calculating total properly 	2
+c)		Handling Exceptions properly in main method	2
+d)		Display the output in specified format	2
+e)		Proper comments, coding conventions, indentation & implementation of OOP concepts	1
+
+========================================================================================================
+Core Java
+
+Employee Id: _____________			Name: ____________________	
+
+Duration: 3 Hours                                                                      		  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+Q 1 [ Marks :15 ]
+
+Create an application in java to simulate how a large task can be solved by partitioning them with multiple worker threads as given in the below specification.
+
+Create a class Employee with the following attributes. 
+	empNo			integer
+	basicPay		float
+	hra			float
+	conveyance		float	
+	epf			float
+	tax			float
+
+Create n number of Employee objects with the inputs given by the user and store them in a Vector.  Accept value of n as input from user.
+
+It then creates n number of threads; each thread is provided with an Employee object taken from the Vector. The thread then computes and prints the net salary of the employee assigned to it using the below formula. 
+
+	Net Salary = basicPay + hra + conveyance – epf – tax
+
+The main thread has to wait until all the worker threads finish doing the assigned work. 
+
+Once after all the worker threads have completed the given task, the main thread has to print the message “End of Salary generation”.
+
+ 
+Marks Distribution:
+Q1 a	Creating Employee class	1
+Q1 b	Creating Employee objects and storing in a Vector	2
+Q1 c	Creating worker threads and giving them task	4
+Q1 d	Successful working of Child threads	4
+Q1 e	Net Salary Computation	1
+Q1 f	Main thread waiting for worker threads to join	2
+Q1 g	Main thread printing final message	1
+
+
+Q 2 [ Marks :10 ]
+        
+Write an abstract class Account as   				    		        
+
+properties:
+accNo      	  	int
+currentBalance  	double
+accHolder  	  	String 
+address		  	String
+
+constructors:
+a parametrized constructor with all properties.
+
+method:
+abstract double calculateInterest(double amt) 
+
+Write a class SavingAccount which extends Account  as:
+
+Properties            	
+     intRate   	       double
+      
+ Constructors:									
+parametrized constructor with all properties as parameters.
+   	
+Call the constructor of super class inside this constructor with the parameters.
+   	
+If currentBalance is less than minBalance throw a custom exception MinBalanceException
+
+Methods: 									
+
+   Implement calculateInterest() method which calculate interest as              	
+       currentBalance* intRate
+
+
+Design Bank class with main method  which contains:
+
+Reading  all information from the user for creating object  of SavingAccount.
+
+Create an object of SavingAccount and Display the total balance in the account as
+
+      Total  =  currentBalance + interest 
+
+       
+	Steps	Marks
+Q2 a 	Designing Account class properly	2
+Q2 b	Designing SavingAccount class properly	3
+Q2 c	Proper calculation of Interest & total in SavingAccount class	3
+Q2 d	Handling User defined exception properly in Bank class	1
+Q2 e	Proper Indentation,comments and Coding Convention	1
+
+
+============================================================================================================
+Core Java
+
+Employee Id: _____________					Name: ____________________	
+
+Duration: 3 Hours                                                                      		  Marks: 25
+
+Instructions:
+1.	First 10 minutes are provided to read & understand the test paper.
+Last 10 minutes are provided to properly submit the test answer folder. 
+These 20 minutes are not counted in test duration. 
+2.	Create a workspace on the desktop. Create a java project with GID as name. Save all your files in this project only.  Upload your Project folder and SHIFT + DEL from desktop.
+3.	Return the test paper to invigilator at the end of the test.
+4.	Referring Java Documentation is allowed.
+5.	Write your employee id in top left corner of the test paper
+6.	Use of Eclipse editor is allowed. 
+7.	Read all the section of paper carefully. 
+8.	Marks will be only awarded to working functionalities.
+9.	Switch OFF your Cell Phone.
+
+Q 1 [ Marks: 15 ]
+
+AnytimeServices is a provider of different Telecom related products to their Customers. They maintain the Orders placed by different Customers.  One customer can raise multiple Orders.
+
+•	Design a Order class with following private attributes
+			orderID 		int
+			orderType		String
+			orderDescription	String
+			orderStatus		String
+
+•	Create parameterized constructor having orderID, orderType and orderDescription as arguments
+•	Getter methods for all attributes. 
+•	Setter Method for orderStatus
+•	Order status should be either “Open” or “Closed”
+•	If order status is neither “Open” nor “Closed” then throw the User defined Exception InvalidSatusException
+
+Design a class Customer class
+customerID 		int
+			customerName	String
+			orderList		Array list of type Order
+
+•	Create parameterized constructor having customerID , customerName as arguments
+•	Also define a method public void addNewOrder(Order) which will add an order placed by customer.
+•	The class will have method public ArrayList getOrderList() which will return all the orders placed by the customer.
+•	The class will have method public void changeOrderStatus (int orderID, String status ) which will change the status of given orderID.
+
+•	Write the main method in the class TestOrder which reads the detail of a customer as input from the user. Also read 2 order details for that customer and add them to the arraylist. 
+•	Ask user to enter order Id and Status, modify the status accordingly.
+•	Display the order details for that customer.
+
+Q 1 - A	Steps	Marks
+a)	Proper design of the class Order	2
+b)	Proper design of the class Customer 	2
+c)	Dealing with Exception	2
+d)	Proper working of addNewOrder() method	2
+e)	Proper working of getOrderList() method	2
+f)	Proper working of changeOrderStatus() method	2
+g)	Reading inputs from the user and testing the functionalities	3
+
+
+Q 2 [ Marks: 10 ]
+
+Write a class Student with the below attributes. 
+	rollNo		int
+	name 		String
+	major		String
+
+	Provide getters and setters to initialize the attributes.
+
+Write a class StoreStudent which contains the main method. Read the details of an employee as input from the user and create a Student instance. 
+
+Serialize the object into a file whose name is given as input through command line. Also deserialize the same to print the details. 
+
+
+Q 2	Steps	Marks
+a)	Designing the Employee class properly	2
+b)	Using command line argument	1
+c)	Writing the object into a file	3
+d)	Reading the object from the file	3
+e)	Proper comments, coding conventions & indentation 	1
+
+============================================================================================================
+
+
+
+
+
+
+
+
+
